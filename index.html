@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <title>Eagle Bank Taxas</title>
+</head>
+<body>
+
+  <h1>Faça a simulação</h1>
+  <h2>Nosso sistema de simulação serve para que você saiba quanto seu cliente pagará no total das prestações.</h2>
+
+  <div class="container">
+    <div class="top">
+      <div class="top-left">
+
+        <h3>Plano</h3>
+
+        <select name="plans" id="plans">
+          <option value="" disabled selected>Selecione o plano</option>
+          <option value="bronze">Bronze</option>
+          <option value="cobre">Cobre</option>
+          <option value="gold">Gold</option>
+          <option value="platinum">Platinum</option>
+        </select>
+
+        <h3>Bandeira</h3>
+
+        <select name="flag" id="flag">
+          <option value="" disabled selected>Selecione a bandeira</option>
+          <option value="visa">Visa</option>
+          <option value="mester">Master</option>
+          <option value="elo">Elo</option>
+          <option value="hiper">Hiper</option>
+        </select>
+
+        <h3>Insira o total da compra</h3>
+
+        <input type="number" min="0.00" max="10000.00" step="0.01" />
+
+        <h3>Número de parcelas</h3>
+
+        <input type="range" min="1" max="12" value="1" id="slider">
+
+      </div>
+      <div class="top-right">
+
+        <div id="tax-header">
+          <h4>Resultado</h4>
+          <div id="tax">
+            <p>Taxa: 1,49</p>
+          </div>
+        </div>
+        <div id="value">
+          <p id="coin">R$</p>
+          <p id="value-total">4.925,50</p>
+          <p id="month">/mês</p>
+        </div>
+
+        <div id="part-container">
+          <p id="part-value">R$ 175,00</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
