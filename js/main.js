@@ -29,10 +29,11 @@ window.onload = function () {
     taxValue.innerText = 'Taxa: ' + taxas.simples.visa[slider.value] + '%'
     let value = (Number(amount.value) + Number(Number(amount.value) * Number(taxas.simples.visa[slider.value]))/100);
     partValue.innerText = 'R$' + value.toFixed(2).replace('.',',');
-    valueTotal.innerText = ((value) / Number(slider.value)).toFixed(2);
+    valueTotal.innerText = Number(slider.value) >= 0 ? ((value) / Number(slider.value)).toFixed(2) : value.toFixed(2);
   }
 
   slider.onchange = handleUpdate;
+  amount.onchange = handleUpdate;
 
   console.log(slider.value);
 };
