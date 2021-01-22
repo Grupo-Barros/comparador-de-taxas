@@ -23,14 +23,18 @@ window.onload = function () {
   const taxValue = document.getElementById("tax-value");
   const valueTotal = document.getElementById("value-total");
   
-  slider.onchange = (e) => {
+  function handleUpdate(){
     sliderNum.innerText = slider.value + 'x';
-    valueTotal.innerText = (amount.value / slider.value).toFixed(2);
+    
     taxValue.innerText = 'Taxa: ' + taxas.simples.visa[slider.value] + '%'
-    partValue.innerText = 'R$ ' + (amount.value * taxas.simples.visa[slider.value]).toFixed(2);
+    let value = (Number(amount.value) + Number(Number(amount.value) * Number(taxas.simples.visa[slider.value]))/100);
+    partValue.innerText = 'R$' + value.toFixed(2).replace('.',',');
+    valueTotal.innerText = ((value) / Number(slider.value)).toFixed(2);
   }
 
-
+  slider.onchange = handleUpdate;
 
   console.log(slider.value);
 };
+
+// Hello World
