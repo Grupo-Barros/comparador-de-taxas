@@ -265,5 +265,11 @@ h4 {
   :root {
     font-size: 50%;
   }
+  body {
+    padding: 2rem 0;
+  }
+  .container {
+    width: 90vw;
+  }
 
 }
