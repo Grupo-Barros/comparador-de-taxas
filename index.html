@@ -24,7 +24,7 @@
           <h3>Plano</h3>
 
           <select name="plans" id="plans">
-            <option value="" disabled selected>Selecione o plano</option>
+            <option value="simples" selected>Simples</option>
             <option value="bronze">Bronze</option>
             <option value="cobre">Cobre</option>
             <option value="gold">Gold</option>
@@ -36,9 +36,8 @@
           <h3>Bandeira</h3>
 
           <select name="flag" id="flag">
-            <option value="" disabled selected>Selecione a bandeira</option>
-            <option value="visa">Visa</option>
-            <option value="mester">Master</option>
+            <option value="visa" selected>Visa</option>
+            <option value="master">Master</option>
             <option value="elo">Elo</option>
             <option value="hiper">Hiper</option>
           </select>
@@ -47,14 +46,14 @@
         <div class="item">
           <h3>Insira o total da compra</h3>
 
-          <input value="100" id="value2" placeholder="" type="number" min="0.00" max="10000.00" step="0.01" />
+          <input id="value2" placeholder="" type="number" min="0.00" max="10000.00" step="0.01" />
         </div>
 
         <div class="item">
           <h3>Número de parcelas</h3>
 
           <input type="range" min="0" max="12" value="0" id="slider"/>
-          <p id="indice">1x</p>
+          <p id="indice">0x</p>
         </div>
 
       </div>
@@ -68,12 +67,12 @@
         </div>
         <div id="value">
           <p id="coin">R$</p>
-          <p id="value-total">4.925,50</p>
+          <p id="value-total">0,00</p>
           <p id="month">/Mês</p>
         </div>
 
         <div id="part-container">
-          <p id="part-value">R$ 175,00</p>
+          <p id="part-value">R$ 0,00</p>
         </div>
 
       </div>
