@@ -76,7 +76,7 @@ window.onload = function () {
     sliderNum.innerText = Number(slider.value) > 0 ? slider.value + 'x' : 'DÉBITO';
     
     taxValue.innerText = 'Taxa: ' + taxas[plan.value][flag.value][slider.value] + '%'
-    let value = (Number(amount.value) - Number(Number(amount.value) * Number(taxas[plan.value][flag.value][slider.value]))/100);
+    let value = (Number(amount.value) - Number(Number(amount.value) * Number(taxas[plan.value][flag.value][slider.value]))/100) - 4.36;
     partValue.innerText = 'R$ ' + value.toFixed(2).replace('.',',');
     valueTotal.innerText = Number(slider.value) > 0 ? ((value) / Number(slider.value)).toFixed(2).replace('.',',') : value.toFixed(2).replace('.',',');
   }
